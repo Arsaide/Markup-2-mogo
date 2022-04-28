@@ -140,7 +140,7 @@ a{
 /*----------------------------> BANER <----------------------------*/
 
 .baner {
-    background-image: url(/img/banners/background.png);
+    background-image: url("../img/banners/background.png");
     background-repeat: no-repeat;
     background-position: 0 0;
     background-repeat: no-repeat;
@@ -456,7 +456,7 @@ a{
 }
 .feauture::after {
     content: '';
-    background-image: url(/img/banners/background-device.jpg);
+    background-image: url("../img/banners/background-device.jpg");
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -503,7 +503,7 @@ a{
     flex-wrap: wrap;
 }
 .services-content-left {
-    background-image: url(/img/service-card/card.png);
+    background-image: url("../img/service-card/card.png");
     background-position: 0 0;
     background-repeat: cover;
     background-size: 100% 100%;
@@ -721,21 +721,21 @@ a{
     padding: 15px;
 }
 figure.one > div {
-    background-image: url("/img/team/graphic-design.jpg");
+    background-image: url("../img/team/graphic-design.jpg");
     background-position: center;
     background-size: cover;
     width: 381px;
     height: 471px;
 }
 figure.two > div {
-    background-image: url("/img/team/ux-design.jpg");
+    background-image: url("../img/team/ux-design.jpg");
     background-size: cover;
     background-position: center;
     width: 381px;
     height: 471px;
 }
 figure.three > div {
-    background-image: url("/img/team/developer.jpg");
+    background-image: url("../img/team/developer.jpg");
     background-size: cover;
     background-position: center;
     width: 381px;
@@ -924,7 +924,7 @@ figcaption > p {
     grid-area: item-1;
 }
 .job-item1 {
-    background-image: url("/img/work/Layer1.jpg");
+    background-image: url("../img/work/Layer1.jpg");
 }
 .job-item1 div span {
     display: block;
@@ -937,7 +937,7 @@ figcaption > p {
     grid-area: item-2;
 }
 .job-item2 {
-    background-image: url("/img/work/Layer2.jpg");
+    background-image: url("../img/work/Layer2.jpg");
 }
 .job-item2 div span {
     display: block;
@@ -950,7 +950,7 @@ figcaption > p {
     grid-area: item-3;
 }
 .job-item3 {
-    background-image: url("/img/work/Layer3.jpg");
+    background-image: url("../img/work/Layer3.jpg");
 }
 .job-item3 div span {
     display: block;
@@ -963,7 +963,7 @@ figcaption > p {
     grid-area: item-4;
 }
 .job-item4 {
-    background-image: url("/img/work/Layer4.jpg");
+    background-image: url("../img/work/Layer4.jpg");
 }
 .job-item4 div span {
     display: block;
@@ -976,7 +976,7 @@ figcaption > p {
     grid-area: item-5;
 }
 .job-item5 {
-    background-image: url("/img/work/Layer5.jpg");
+    background-image: url("../img/work/Layer5.jpg");
 }
 .job-item5 div span {
     display: block;
@@ -989,7 +989,7 @@ figcaption > p {
     grid-area: item-6;
 }
 .job-item6 {
-    background-image: url("/img/work/Layer6.jpg");
+    background-image: url("../img/work/Layer6.jpg");
 }
 .job-item6 div span {
     display: block;
@@ -1002,7 +1002,7 @@ figcaption > p {
     grid-area: item-7;
 }
 .job-item7 {
-    background-image: url("/img/work/Layer7.jpg");
+    background-image: url("../img/work/Layer7.jpg");
 }
 .job-item7 div span {
     display: block;
