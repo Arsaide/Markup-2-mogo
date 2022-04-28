@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700;900&display=swap');
 
 /*----------------------------> OTHER <----------------------------*/
 
@@ -22,10 +23,11 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: white;
     font-size: 16rem;
+    outline:none;
 }
 p {
     font-size: 17rem;
-    font-weight: bold;
+    font-weight: 300;
 }
 
 li {
@@ -228,7 +230,7 @@ a{
     margin-top: 20px;
     margin-bottom: 20px;
 }
-#intro , #work , #about , #contacts {
+#intros , #works , #abouts , #contacts {
     font-size: 22px;
     font-weight: bolder;
 }
@@ -1164,20 +1166,16 @@ figcaption > p {
 /*----------------------------> REVIEWS <----------------------------*/
 
 .review-content {
-    margin-top: 5vh;
+    margin-top: 10vh;
+    padding: 10vh 0 10vh 0;
     width: 100%;
-    height: 900px;
     color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("../img/banners/background-review.jpg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    max-width: 100%;
+    position: relative;
 }
-/* .review-content::after {
+.review-content::after {
     content: '';
     background-image: url("../img/banners/background-review.jpg");
     background-position: 0 0;
@@ -1191,7 +1189,356 @@ figcaption > p {
     right: 0;
     position: absolute;
     z-index: -1;
-} */
-.review-content > .title {
-    margin-top: 50px;
+}
+.review-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.review-item {
+    width: 35vw;
+    min-width: 400px;
+    margin: 0 40px 40px 0;
+    display: flex;
+    height: 15vh;
+}
+.review-item div h1 {
+    font-size: 17rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.review-item div h3 {
+    font-size: 16rem;
+    font-style: italic;
+}
+.review-item div p {
+    font-size: 15rem;
+}
+.review-item div div {
+    width: 50px;
+    height: 4px;
+    border-top: 4px solid #fc6847;
+    margin: 20px 0 20px 0;
+}
+.review-item-avatar {
+    margin-right: 30px;
+    height: 100px;
+    width: 100px;
+}
+
+/*----------------------------> BLOG <----------------------------*/
+
+.blog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+}
+.blog-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    max-width: 1300px;
+}
+.blog-item {
+    margin: 15px 0;
+    padding: 0 15px;
+}
+.blog-item_inner {
+    position: relative;
+    display: flex;
+}
+.blog-item_inner:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(211,222,58);
+    background: linear-gradient(0deg, rgba(211,222,58,0.7) 0%, rgba(244,109,109,0.7) 79%);
+    opacity: 0;
+    transition: all 1s ease;
+    z-index: 1;
+}
+.blog-item_inner:hover:before {
+    opacity: 1;
+}
+.blog-item_img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.date {
+    height: 71px;
+    width: 61px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(149, 225, 211);
+    position: absolute;
+    bottom: 10px;
+    left: -5px;
+    transition: all 1s ease;
+    z-index: 2;
+}
+.blog-item_inner:hover .date {
+    transform: scale(1.1);
+}
+.blog-item-description {
+    margin: 10px 0;
+    width: 355px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.blog-item-description h1 {
+    font-size: 16rem;
+}
+.blog-item-description p {
+    font-size: 14rem;
+    line-height: normal;
+}
+.blog-border {
+    width: 110%;
+    height: 1px;
+    background-color: gray;
+    margin-top: 30px;
+}
+.blog-item-description span {
+    font-weight: bold;
+    font-style: italic;
+    padding: 0 15px 0 0;
+}
+.blog-item-description #comment:before {
+    content: "\f4ad";
+    font-family: FontAwesome;
+    display: inline-block;
+    padding: 0 4px 0 0;
+    color: rgb(149, 225, 211);
+}
+.blog-item-description #eye:before {
+    content: "\f06e";
+    font-family: FontAwesome;
+    display: inline-block;
+    padding: 0 4px 0 0;
+    color: rgb(149, 225, 211);
+}
+
+/*----------------------------> MAP <----------------------------*/
+
+.map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgba(243, 129, 129, 1);
+    position: relative;
+    padding-top: 5vh;
+    width: 100vw;
+}
+.map::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/banners/background-map.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    filter: opacity(40%);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+.map span {
+    text-align: center;
+    font-size: 50rem;
+}
+.map p {
+    text-align: center;
+    font-size: 40rem;
+}
+
+/*----------------------------> FOOTER <----------------------------*/
+
+footer {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+footer section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 3vh;
+}
+footer section .footer-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.info {
+    width: 450px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    line-height: 6em;
+    color: #999999;
+    margin: 15px;
+} 
+.info h1 {
+    font-size: 50rem;
+    font-weight: 900;
+}
+.info h2 {
+    font-size: 15rem;
+    line-height: normal;
+    padding-right: 10px;
+}
+.info h3 {
+    font-size: 16rem;
+}
+.info h3 span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20rem;
+}
+.info-border {
+    height: 1px;
+    width: 100%;
+    background-color: rgb(196, 195, 195);
+}
+.info .social-networks {
+    font-style: italic;
+    font-size: 15rem;
+    line-height: normal;
+    margin: 10px 0 3em 0;
+}
+.info .social-networks span a {
+    margin: 0 10px 0 10px;
+    color: rgb(149, 225, 211);
+    font-size: 20rem;
+    transition: all 1s ease; 
+}
+.info div {
+    display: flex;
+}
+.info div input {
+    width: 231px;
+    height: 41px;
+    padding-left: 5px;
+    outline: none;
+}
+.info div div {
+    background-color: rgba(149, 225, 211, 1);
+    width: 151px;
+    height: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease;
+    cursor: pointer;
+    color: white;
+    font-size: 15rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: normal;
+}
+.info div div:focus {
+    color: black;
+    background-color: #fc6847;
+}
+
+.footer-blogs {
+    width: 400px;
+    height: 450px;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer-blogs h1 {
+    text-transform: uppercase;
+    font-size: 19rem;
+    margin: 30px 0;
+}
+.footer-blogs figure {
+    display: flex;
+}
+.img1 {
+    background-image: url(../img/footer-blogs/card1.png);
+}
+.img2 {
+    background-image: url(../img/footer-blogs/card2.png);
+}
+.img3 {
+    background-image: url(../img/footer-blogs/card3.png);
+}
+.footer-blogs figure .img1 , .img2 , .img3 {
+    height: 80px;
+    width: 120px;
+    min-width: 120px;
+}
+.footer-blogs figure .img-desc p{
+    font-size: 15rem;
+    font-weight: bold;
+    line-height: normal;
+}
+.footer-blogs figure .img-desc span {
+    font-weight: lighter;
+    font-size: 15rem;
+    font-style: italic;
+    line-height: normal;
+}
+
+.instagram {
+    width: 270px;
+    height: 450px;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.instagram h1 {
+    text-transform: uppercase;
+    font-size: 19rem;
+    margin: 30px 0;
+}
+.instagram p a {
+    color: #333333;
+    font-style: italic;
+    font-weight: lighter;
+}
+.instagram-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 270px;
+}
+.instagram-grid img {
+    height: 88px;
+    width: 88px;
+    min-height: 88px;
+    min-width: 88px;
+    margin: 1px;
+}
+
+.authorship {
+    width: 100%;
+    border-top: 1px solid rgba(229, 229, 229, 1);
+    margin-top: 45px;
+}
+.authorship p {
+    font-size: 15rem;
+    font-style: italic;
+    font-weight: lighter;
+    text-align: center;
+    margin-top: 15px;
 }
